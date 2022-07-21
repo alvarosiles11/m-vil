@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+      integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>about</title>
+    <style>
+      .parent {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        /* align-items: center;
+        justify-items: center;
+        grid-auto-rows: minmax(60px, auto);
+         */
+        /* background-color: cyan; */
+
+      }
+
+      .box {
+        /* background-color: cyan; */
+        /* border: 1px solid #ccc; */
+        border-radius: 10px;
+        /* height: "80px"; */
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body class="container">
+    <br />
+    <div id="title" class="center"></div>
+    <script>
+      const text = [
+        {
+          grupo: 'apk',
+          title: 'testio',
+          foto: 'https://play-lh.googleusercontent.com/EpOnxe-rqPRnbofJ2lfucZgLvxFNxrYRdpEpO-FUCJeyRGHLvJ0IicLp9CZ5m9X2vw=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.testio.app&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'Ring Sizer',
+          foto: 'https://play-lh.googleusercontent.com/ZMvRub0bPMViq_c-iHQN6A-KxFz-ebI5ve29tO-lopeQ2d1yurPbltLDFiUHXI6plqU=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=ru.cherrydesign.ringsizer&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'figma',
+          foto: 'https://play-lh.googleusercontent.com/efwNlvQ3pch_-hZ9xeHf6YF-f_rHzQQo21IVevPLOxpzSVfxuVKom2_7C6axFbC-3rU=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.figma.mirror&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'fakegps',
+          foto: 'https://play-lh.googleusercontent.com/ksm48DrpN9zPuxS4UpMCZS-EBTFRe_1RE_kwTx54IXFCakXlQNp9u1lwbsMvfq6Kqg=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.blogspot.newapphorizons.fakegps&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'wattpad',
+          foto: 'https://play-lh.googleusercontent.com/hXzUJqlB3e2-o--OEdziNHQxSql98xxQXeFI2uS-kZx2RVSBHtf3X-IS7x-39ovx=s48-rw',
+          link: 'https://play.google.com/store/apps/details?id=wp.wattpad&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'segipQr',
+          foto: 'https://play-lh.googleusercontent.com/kLZDQ3mHs_m4l6S7ozARPQStJfzDgJRArIv4GHtO1aVXTEFaA-bK5OhrLGybWxayyGM=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=bo.gob.segipQr&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'ping',
+          foto: 'https://play-lh.googleusercontent.com/qiUxb9L6zzLzcdezA3AugaLOPVuzrihHF9FR7VNFrvICoFfXxDcoOqJXeJa35wyx6jQ=s48-rw',
+          link: 'https://play.google.com/store/apps/details?id=ru.otdr.ping&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'signalmonitoring',
+          foto: 'https://play-lh.googleusercontent.com/uXSBhX9K-h7Bj9EpI-L2EvLm4kO1MsYW_32Lqhcjqk9Gvk66AiCf5i18nsvm4O3qdmw=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.signalmonitoring.wifimonitoring&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'tplink',
+          foto: 'https://play-lh.googleusercontent.com/7qP0SjMKao_elupKwb3kcSKZQwifAb1xlW5dE_xIKTqSuY7ROPxEF8fXwMnxCxKV_Q=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.tplink.tether&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'Nexxt Home',
+          foto: 'https://play-lh.googleusercontent.com/oj3-J9QVuz01IKAKdO9t1VzsgZM4sQ-0E44wlXnPscpXeZwtYKokbax7ilsUyJ8VZDw=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.intcomex.smart&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'gDMSS Plus',
+          foto: 'https://play-lh.googleusercontent.com/71azJWRgiXzHNT7dSNehCKsuW6QEbU9HEdySQ0ihcyynGX-QPFywi0xW6WAGDi17G1Q=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.mm.android.direct.gdmssphone&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'QR & Barcode Scanner',
+          foto: 'https://play-lh.googleusercontent.com/nJcgTrETflv8liaA-3zrv7po7NyfKDMpMswbazxx6oWGnNAzT4D1mPniyX0nOrE-YnaV=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.gamma.scan&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'zenflipclock',
+          foto: 'https://play-lh.googleusercontent.com/KTwZlBR37aWuGqaCtVSPTRABqB0HmOzjY2Ey3uckUYr1QLSPNrvf4IIKGiluLdjAwA=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.mad.zenflipclock&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'Remote for LED Lights',
+          foto: 'https://play-lh.googleusercontent.com/InDKPbjrMHpg_DHN_Ci6RALm7JTiT0bDTHAy61AD8QA4TZbJ7AzBm5QHTgdzPcn5KNNA=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.allrcs.led_remote&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'SoAT',
+          foto: 'https://play-lh.googleusercontent.com/6eaRu4El0I5rE7-DmgAbOOxkg_oo0XjSkXsIn6Y1zJz-XhQQyTXnsqNwVrbWyUZfpwk=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=bo.vulcan.unividasoat',
+        },
+        {
+          grupo: 'apk',
+          title: 'Consulta Multas Deudas Bolivia',
+          foto: 'https://play-lh.googleusercontent.com/eIOOExGRiTZkbf4YIEJptyX57GPxOr_MEBQtFaHgcI53JZIqRFjOn9jFG_e3-bUZc2w=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.infraccion.bolivia',
+        },
+        {
+          grupo: 'apk',
+          title: 'ruat',
+          foto: 'https://play-lh.googleusercontent.com/ctjCELj1fcGsVKkCh7nY4Avtc1fD13pJ5Ps0N0n0t3dAcuokPYb-m97aZruyBu8hSOCg=s48-rw',
+          link: 'https://play.google.com/store/apps/details?id=bo.gob.ruat.ruatmovil&hl=es_BO&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'Discord Inc.',
+          foto: 'https://play-lh.googleusercontent.com/0oO5sAneb9lJP6l8c6DH4aj6f85qNpplQVHmPmbbBxAukDnlO7DarDW0b-kEIHa8SQ=s48-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.discord&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'Encontrar mi dispositivo',
+          foto: 'https://play-lh.googleusercontent.com/aX0ql6V6PvVotibIvaNW7CRjaJ2oUyBIX_WgSkAl36vOAaoXiw6yQufxVQ2LV_D2DLg=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.adm',
+        },
+        {
+          grupo: 'apk',
+          title: 'Google Lens',
+          foto: 'https://play-lh.googleusercontent.com/G5oF0mhpOcQzFTrU6TDUL0JoAjzRt38weiZKua7L61WVT1z3dPcE9gUu-W2EwtM9cZU=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.google.ar.lens',
+        },
+        {
+          grupo: 'apk',
+          title: 'Google Home',
+          foto: 'https://play-lh.googleusercontent.com/vr1isZKzTtlok9P81H6cR98iqpPhkuQHJp19Z5kPej3QlhNTnLohXpqcgMqrQpyegA=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app',
+        },
+        {
+          grupo: 'apk',
+          title: 'pinterest',
+          foto: 'https://play-lh.googleusercontent.com/dVsv8Hc4TOUeLFAahxR8KANg22W9dj2jBsTW1VHv3CV-5NCZjP9D9i2j5IpfVx2NTB8=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.pinterest&hl=en_US&gl=US',
+        },
+        {
+          grupo: 'apk',
+          title: 'PicsArt ',
+          foto: 'https://play-lh.googleusercontent.com/9_4enaxy97eNDNJYKtE1JNfXNLKygourrBnWzLqjUGIgUcnTQ_DKxKsqiGDsN3QfDA=w240-h480-rw',
+          link: 'https://androforever.com/picsart-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'Memrise ',
+          foto: 'https://play-lh.googleusercontent.com/eooMtOtVjJzq7fCS4G--Iy3jY8QvFEzdsoWMcO5Z_mJOilep2Wu_aZLJjTP9SOF_9jU=s48-rw',
+          link: 'https://androforever.com/memrise-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'TikTok ',
+          foto: 'https://play-lh.googleusercontent.com/z5nin1RdQ4UZhv6fa1FNG7VE33imGqPgC4kKZIUjgf_up7E-Pj3AaojlMPwNNXaeGA=w240-h480-rw',
+          link: 'https://androforever.com/tiktok-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'Duolingo ',
+          foto: 'https://play-lh.googleusercontent.com/hSyebBlYwtE2aMjzSIHasUO9cQv9HgNAw9owy6ADO0szOKYO3rDk60r7jcyXu82Fbq1M=w240-h480-rw',
+          link: 'https://androforever.com/duolingo-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'Shazam ',
+          foto: 'https://play-lh.googleusercontent.com/mwTU9-4NX-_QlATb6lILSinKI47wAtOM38GjPYRPQSsQOG2hVRY4h9OfEhDxpf8ADQ=w240-h480-rw',
+          link: 'https://androforever.com/shazam-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'Instagram',
+          foto: 'https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ=s48-rw',
+          link: 'https://androforever.com/instagram-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'spotify',
+          foto: 'https://play-lh.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM=w240-h480-rw',
+          link: 'https://androforever.com/apk-spotify-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'inshot',
+          foto: 'https://play-lh.googleusercontent.com/mjmbWruxfo8oYHsBNI7b76KLj1AEJQo7hXwlmi05EvfFwubOjo8nQJrVEHRe4Vbgpo8=s48-rw',
+          link: 'https://androforever.com/inshot-pro-apk-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'spotify',
+          foto: 'https://play-lh.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM=w240-h480-rw',
+          link: 'https://androforever.com/apk-spotify-premium-android/',
+        },
+        {
+          grupo: 'apk',
+          title: 'spotify',
+          foto: 'https://play-lh.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM=w240-h480-rw',
+          link: 'https://androforever.com/apk-spotify-premium-android/',
+        },
+
+
+        {
+          grupo: 'apk',
+          title: 'Quick Video Recorder',
+          foto: 'https://play-lh.googleusercontent.com/s0pg-WWdItFvlBQvyHzjzLfB-8fY09o0mg0QMrrsorLWFWUqQLBEWWZwqTVDgNoGbX4=w240-h480-rw',
+          link: 'https://play.google.com/store/apps/details?id=com.backgroundvideorecorder.videosnapshorts&hl=en_US&gl=US',
+        },
+      ];
+
+      // 4 formas de eliminar elementos duplicados en un arreglo con Javascript
+
+      const result = text.reduce((r, a) => {
+        if (!r.includes(a.grupo)) {
+          r.push(a.grupo);
+        }
+        return r;
+      }, []);
+
+      //recorrer array y crear un nuevo array con los elementos unicos
+
+      let array = ["apk", "VCS", "Contenerizacion", "Database", "Testing", "Design", "Backend", "Frontend", "Lint"];
+
+      Object.keys(array).map((key) => {
+        var obj100 = array[key];
+        // console.log(array);
+        // console.log(obj100);
+
+        // document.getElementById('title').innerHTML += `<p>${obj100}<p> `;
+
+        let html10 = `   `;
+        // html10 += ` <div class="  " style="background-color: red;"  > `;
+        html10 += ` <div class="parent"> `;
+
+        Object.keys(text).map((key) => {
+          var obj = text[key];
+          if (obj.grupo == obj100) {
+            html10 += `<div class='box'> <a href="${obj.link}"  >
+						    <img src="${obj.foto}" width='100%' alt='${obj.title}' style="border-radius: 10px;">
+							</a> </div>`;
+          }
+        });
+
+        // html10 += `</div>`;
+        html10 += `</div>` + `</br>`;
+
+        document.getElementById('title').innerHTML += html10;
+      });
+
+
+    </script>
+  </body>
+</html>
